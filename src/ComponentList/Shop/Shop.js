@@ -11,7 +11,7 @@ import { Fetchfromdatabase } from "../Fetchfromdatabase/Fetchfromdatabase";
 export default function Shop() {
 
   const [cart, setcart] = useState([]);
- 
+
 
   useEffect(() => {
    setcart( Fetchfromdatabase())
@@ -48,6 +48,7 @@ export default function Shop() {
               handleclick={handleclick}
               key={d.key}
               product={d}
+              cart={cart}
             ></Products>
           ))}
         </div>

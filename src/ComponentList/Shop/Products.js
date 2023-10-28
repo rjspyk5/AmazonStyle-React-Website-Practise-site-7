@@ -1,9 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "./Button";
+import { CartincreaseDecrease } from "./CartincreaseDecrease";
+
 
 export default function Products(props) {
   const { name, seller, stock, img, features, price, key } = props.product;
+
+
   return (
     <div style={{ borderBottom: "1px solid lightgray", marginRight: "5px" }}>
       <div className="row flex-column flex-lg-row flex-md-row my-3 ">
@@ -26,12 +30,14 @@ export default function Products(props) {
               <h6>by:{seller}</h6>
               <p> Price: $ {Math.floor(price)}</p>
               <p>Only {stock} left on stock</p>
-              {props.showaddtocart && (
+
+              {  (props.showaddtocart && (
                 <Button
                   handleclick={props.handleclick}
                   product={props.product}
                 />
-              )}
+              ))}
+
             </div>
 
             <div className="col-lg-6 col-md-6 col-12">

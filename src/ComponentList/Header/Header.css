@@ -1,0 +1,15 @@
+.logo img{
+    height: 80px;
+}
+.headermenu{
+    line-height: 40px;
+    font-size: 20px;
+}
+
+.headermenu a:hover{
+    background-color: gray;
+    color: black !important;
+}
+NavLink .active{
+    background-color: yellow;
+}
